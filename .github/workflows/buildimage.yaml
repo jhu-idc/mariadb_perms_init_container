@@ -37,7 +37,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/jhu-idc/mariadb/perms_init_container:latest
-            ghcr.ip/jhu-idc/mariadb/perms_init_container:${{ steps.prep.outputs.hash }}
+            ghcr.io/jhu-idc/mariadb/perms_init_container:${{ steps.prep.outputs.hash }}
           labels:
             org.opencontainers.image.source=https://github.com/jhu-idc/mariadb_perms_init_container.git
             org.opencontainers.image.title=perms_init_container
