@@ -39,6 +39,6 @@ jobs:
             ghcr.io/jhu-idc/mariadb/perms_init_container:latest
             ghcr.io/jhu-idc/mariadb/perms_init_container:${{ steps.prep.outputs.hash }}
           labels:
-            org.opencontainers.image.source=https://github.com/jhu-idc/mariadb_perms_init_container.git
+            org.opencontainers.image.source=https://github.com/jhu-idc/mariadb_perms_init_container
             org.opencontainers.image.title=perms_init_container
 
