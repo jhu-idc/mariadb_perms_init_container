@@ -8,3 +8,4 @@ RUN apk update && \
 RUN chmod +x /usr/local/bin/set_mariadb_data_perms.sh
 
 CMD [ "/usr/local/bin/set_mariadb_data_perms.sh" ]
+
