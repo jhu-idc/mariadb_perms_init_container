@@ -11,3 +11,5 @@ res=`stat -c "%u:%g" $DIRECTORY`
 if [ $res != $COMBOUGID ]; then
     chown $COMBOUGID -R $DIRECTORY
 fi
+
+
