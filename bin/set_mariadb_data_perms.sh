@@ -1,15 +1,19 @@
 #!/bin/sh
 
+echo "Hi there, I'm testing something"
+
 DIRECTORY=$MARIADB_INIT_DIRECTORY
-UID=$MARIADB_UID
-GID=$MARIADB_GID
+NEWOWNER=$MARIADB_CHANGE_TO
 
-COMBOUGID="$2:$3"
+res=`stat -c "%u:%g" $MARIADB_INIT_DIRECTORY`
 
-res=`stat -c "%u:%g" $DIRECTORY`
-
-if [ $res != $COMBOUGID ]; then
-    chown $COMBOUGID -R $DIRECTORY
+if [ $res != $MARIADB_CHANGE_TO ]; then
+    echo "I am here"
+    chown $MARIADB_CHANGE_TO -R $MARIADB_INIT_DIRECTORY
+    ls -lah $MARIADB_INIT_DIRECTORY
+else
+    echo "Not needed"
+    ls -lah $MARIADB_INIT_DIRECTORY
 fi
 
 
