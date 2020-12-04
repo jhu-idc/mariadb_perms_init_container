@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 echo "Hi there, I'm testing something"
 
 DIRECTORY=$MARIADB_INIT_DIRECTORY
